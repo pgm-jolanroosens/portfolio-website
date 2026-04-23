@@ -1,0 +1,205 @@
+:root {
+    --header-image: url('/images/banner-1.jpg');
+    --body-bg-image: url('/images/lofi-bg.jpg');
+
+    /* colors */
+    --content: hsla(265, 30%, 15%, 0.85);
+    --bg-body: hsl(253, 79%, 6%);
+    --text-color: hsl(291, 100%, 96%);
+    --header-color: hsl(255, 28%, 43%);
+    --color-link: hsl(297, 88%, 68%);
+    --color-nav-bar: hsl(257, 67%, 11%);
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url('https://sadhost.neocities.org/fonts/Nunito-Regular.ttf');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--bg-body);
+    background-repeat: repeat;
+    background-size: auto;
+    color: var(--text-color);
+    background-image: var(--body-bg-image);
+    background-attachment: fixed;
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-height: 80vh;      
+    object-fit: contain; 
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+p {
+    line-height: 1.5;
+    margin-top: 0;
+    max-width: 65ch;
+}
+
+h1 {
+    font-size: 1.6rem; 
+}
+
+h1, h2, h3 {
+    color: var(--color-link);
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+strong {
+    color: var(--color-link);
+}
+
+a {
+    color: var(--color-link);
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.container {
+    max-width: 56.25rem; 
+    margin-inline: auto;
+}
+
+.header-pic {
+    width: 100%;
+    background-color: var(--header-color);
+    height: 12rem; 
+    background-image: var(--header-image);
+    background-size: 100%;
+    background-position: center;      
+}
+
+.header-nav {
+    height: 2.5rem; 
+    background-color: var(--color-nav-bar);
+    width: 100%;
+}
+
+.header-nav ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: space-evenly;
+
+    > li {
+        padding-top: 0.625rem; 
+    }
+}
+
+main {
+    background-color: var(--content);
+    padding: 1.25rem;
+}
+
+footer {
+    background-color: var(--color-nav-bar);
+    width: 100%;
+    height: 2.5rem; 
+    padding: 0.625rem;
+    display: flex; 
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-flex {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+/*index*/
+
+.hero-grid {
+    display: grid;
+    gap: 2rem;
+
+    @media (min-width: 50rem) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.hero-grid img {
+    width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+.project {
+    padding: 1rem;
+    background-color: hsla(265, 30%, 15%);
+    margin-bottom: 1rem;
+
+    p {
+        padding-bottom: 1rem;
+    }
+}
+
+/*about */
+
+.skill-meter {
+    display: flex;
+    gap: 0.3rem;
+}
+
+.block {
+    width: 1.25rem;
+    height: 0.65rem;
+    background-color: hsla(0, 0%, 100%, 0.1);
+    border: 0.06rem solid var(--color-link);
+    border-radius: 0.125rem;
+}
+
+.block.active {
+    background-color: var(--color-link);
+    box-shadow: 0 0 0.5rem var(--color-link);
+}
+
+/*form*/
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-top: 1rem;
+
+    a {
+        color: hsl(50, 90%, 80%);
+    }
+}
+
+.fui-instructions {
+    color: var(--text-color) !important;
+}
+
+.fui-label {
+    color: var(--color-link) !important;
+}
+
+.fui-btn {
+    background-color: var(--color-link) !important;
+    color: var(--text-color) !important;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
