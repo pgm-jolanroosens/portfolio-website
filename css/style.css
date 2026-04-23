@@ -1,6 +1,6 @@
 :root {
-    --header-image: url('/images/banner-1.jpg');
-    --body-bg-image: url('/images/lofi-bg.jpg');
+    --header-image: url('../images/banner-1.jpg');
+    --body-bg-image: url('../images/lofi-bg.jpg');
 
     /* colors */
     --content: hsla(265, 30%, 15%, 0.85);
